@@ -4,6 +4,7 @@ from discord.ext import commands
 import logging
 from dotenv import load_dotenv
 import os
+import torunn
 
 #gettoken
 load_dotenv()
@@ -171,6 +172,7 @@ async def set_up_role_error(ctx, error):
     else:
         await ctx.reply(f"Error: {error}")
 
+torunn.keep_alive()
 bot.run(token, log_handler = handler, log_level = logging.DEBUG)
 
 
